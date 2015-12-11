@@ -1,9 +1,9 @@
 CURRENT_DIRECTORY := $(shell pwd)
 
 build:
-	@docker build --tag=espressodev/mysql $(CURRENT_DIRECTORY)/5.6
+	@docker build --tag=espressodev/mysql:latest $(CURRENT_DIRECTORY)
 
 build-no-cache:
-	@docker build --no-cache --tag=espressodev/mysql $(CURRENT_DIRECTORY)/5.6
+	@docker build --no-cache --tag=espressodev/mysql:latest $(CURRENT_DIRECTORY)
 
 .PHONY: build
